@@ -1,13 +1,45 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #030712;
+  color: #f9fafb;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@keyframes aurora-1 {
+  0%, 100% { transform: translate(0%, 0%) scale(1); }
+  33% { transform: translate(5%, -10%) scale(1.1); }
+  66% { transform: translate(-5%, 5%) scale(0.95); }
+}
+
+@keyframes aurora-2 {
+  0%, 100% { transform: translate(0%, 0%) scale(1); }
+  33% { transform: translate(-8%, 5%) scale(1.05); }
+  66% { transform: translate(8%, -8%) scale(1.1); }
+}
+
+@keyframes aurora-3 {
+  0%, 100% { transform: translate(0%, 0%) scale(1); }
+  50% { transform: translate(6%, 6%) scale(0.9); }
+}
+
+.aurora-blob-1 {
+  animation: aurora-1 12s ease-in-out infinite;
+}
+
+.aurora-blob-2 {
+  animation: aurora-2 15s ease-in-out infinite;
+}
+
+.aurora-blob-3 {
+  animation: aurora-3 10s ease-in-out infinite;
 }
